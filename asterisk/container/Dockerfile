@@ -1,7 +1,7 @@
 FROM debian:bookworm
 
 #Install Asterisk & Apache2
-RUN apt-get -y install apache2 asterisk
+RUN apt-get update -y && apt-get -y install apache2 asterisk
 RUN mkdir -p /etc/asterisk
 COPY etc.asterisk.rtp.conf.sh .
 COPY etc.asterisk.rtp.conf .
