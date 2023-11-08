@@ -1,4 +1,6 @@
-FROM debian:bookworm
+# FROM debian:bookworm # asterisk package not yet on bookworm
+FROM debian:bullseye
+
 
 #Install Asterisk & Apache2
 RUN apt-get update -y && apt-get -y install apache2 asterisk
